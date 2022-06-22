@@ -1,0 +1,11 @@
+.class{
+    text-align: center;
+}
+.search-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+input{
+    font-size: 1rem;
+}
