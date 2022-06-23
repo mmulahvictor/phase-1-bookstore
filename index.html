@@ -12,15 +12,19 @@
     <h1 class="title">Book store</h1>
 
     <!-- search area -->
-    <div class="search-wrapper">
-        <label for="search">Search Books</label>
-        <input type="search" id="search" data-search>
-    </div>
-    <div class="container">
+    <section class="search-area">
+        <h1>Books search</h1>
+        <div class="search-container flex">
+          <form class="flex" id="submit">
+            <input type="text" id="search" placeholder="Search books ..."/>
+            <button class="search-btn" type="submit">search</button>
+          </form>
+        </div>
+      </section>
+    
         <div class="row" id="row">
             
         </div>
-    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>

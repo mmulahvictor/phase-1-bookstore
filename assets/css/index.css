@@ -1,3 +1,7 @@
+body{
+    background: blue;
+}
+
 .class{
     text-align: center;
 }
@@ -8,4 +12,14 @@
 }
 input{
     font-size: 1rem;
+}
+.hidden{
+    display: none !important;
+}
+.visible{
+    display: flex;
+}
+.card-body{
+    height: 200px;
+    overflow: scroll;
 }
