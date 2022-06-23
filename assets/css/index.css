@@ -20,6 +20,15 @@ input{
     display: flex;
 }
 .card-body{
-    height: 200px;
+    height: 300px;
     overflow: scroll;
+}
+.card{
+    height: 93%;
+}
+.card-img-top{
+    height: 60%;
+}
+.rem{
+    height: 450px;
 }
