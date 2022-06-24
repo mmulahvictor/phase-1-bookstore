@@ -18,10 +18,10 @@ fetch(url)
 			p += `
 				<div class="col-md-4 rem">
                 	<div class="card" style="width:400px">
-                	    <img class="card-img-top" src= ${book.imgUrl} style="width:100%">
+                	    <img class="card-img-top" src= ${book.image} style="width:100%">
                 	    <div class="card-body">
                 	        <h4 class="card-title text-danger">J${book.title}</h4>
-                	        <p class="card-text">${book.description}</p>
+                	        <p class="card-text">${book.isbn13}</p>
                 	        <a href="#" class="btn btn-danger" onclick="myFunction()">${book.price}</a>
                 	    </div>
                 	</div>
