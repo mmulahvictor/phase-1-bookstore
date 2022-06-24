@@ -1,28 +1,31 @@
-# JavaSript Quiz test
+# Book Store
 
 ## By Victor Mmulah
 
 ## Table of Content
 
-- [Description](#description)
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation Process](#installation-Process)
-- [Live Link](#Live-Link)
-- [Technology  Used](#technology-Used)
-- [Licence](#licence)
-- [Authors Info](#Authors-Info)
+- [](#)
+  - [By Victor Mmulah](#by-victor-mmulah)
+  - [Table of Content](#table-of-content)
+  - [Description](#description)
+  - [Features](#features)
+    - [Requirements](#requirements)
+    - [Installation Process](#installation-process)
+    - [Live Link](#live-link)
+    - [Technology  Used](#technology--used)
+  - [Licence](#licence)
+  - [Authors Info](#authors-info)
 
 ## Description
 
-    This project is a web application for after-school computer club. The club is finishing a course on Javascript and the students will have to take a test before completing. The school has therefore decided to create a website on which students can take the test. They will answer the multiple choice questions on the website, which they'll have created and after submitting their answers, they know what they scored on the website.
+    This project is a web application for keeping book records. Users can search book records according to the title or the Author's name.
 
 ## Features
 
 As a user of the application,you will be able to :
 
-1. See a quiz test on the first page.
-1. Can get his/her results displayed.
+1. Search books by author or the title.
+1. View book records.
 
 ### Requirements
 
@@ -33,7 +36,7 @@ As a user of the application,you will be able to :
 
  ****
 
-- Clone to their repo : git clone <https://github.com/mmulahvictor/week3-ip>
+- Clone to their repo : git clone <https://github.com/mmulahvictor/week3-iphttps://github.com/mmulahvictor/phase-1-bookstore>
 - Unzip the downloaded files in a folder of choice.
 - Open the index file from the zipped file with any browser.
 
@@ -41,7 +44,7 @@ As a user of the application,you will be able to :
 
 ### Live Link
 
-- Click this link to view the live application < >
+- Click this link to view the live application <https://mmulahvictor.github.io/phase-1-bookstore/ >
 
 ### Technology  Used
 
@@ -49,7 +52,7 @@ As a user of the application,you will be able to :
 
 - CSS - which was used to style the User Interface.
 - JavaScript - which was used for DOM(Document Object Manipulation) scripts.
-JSON - 
+JSON - for data manipulation
 
 ## Licence
 
