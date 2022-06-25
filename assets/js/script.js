@@ -2,6 +2,22 @@ const url = 'https://mmulahvictor.github.io/data/db.json'
 let p = "";
 const input = document.querySelector('search');
 const searchBtn = document.querySelector('#search-btn');
+document.querySelector('#book-form').addEventListener('submit', handleSubmit)
+
+function handleSubmit(e){
+	e.preventDefault()
+	let bookObj = {
+		title: e.target.title.value,
+		author: e.target.author.value,
+		imgUrl: e.target.imgUrl.value,
+		price: e.target.price.value,
+		review: e.target.review.value,
+		description: e.target.description.value,
+		source: e.target.source.value
+	}
+	fetchBooks(bookObj)
+	newBook(bookObj)
+}
 
 function fetchBooks(){
 fetch(url)
@@ -25,30 +41,49 @@ fetch(url)
 	document.querySelector('#row').innerHTML = p
 	})
 })}
-fetchBooks()
-	//search for a book
-const fetchName=()=>{
-    let value = input.value;
-    fetch(`url${value}`)
-    .then(response => response.json())
-    .then(data=>{
-		let shows = data.Books;
-        p.innerHTML="";
-        shows.results.forEach(element => {
-            createElements(element)
-        });
-    })}
 
-// search by enter key
-    input.addEventListener("keyup", function(event) {
-        console.log(event.key)
-        if(event.keyCode >= 48 && event.keyCode <= 90) {
-            searchBtn.innerHTML = event.key
-        }        
-        if (event.keyCode === 13) {
-         event.preventDefault();
-         fetchName()
-        }
-      });
+function newBook(bookObj){
+	// console.log(JSON.stringify(bookObj))
+	fetch(url,{
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body:JSON.stringify(bookObj)
+	})
+	.then(res => res.json())
+	.then(book => console.log(book))
+}
+
+
+function initialize(){
+	fetchBooks()
+
+}
+initialize()
+	//search for a book
+// const fetchName=()=>{
+//     let value = input.value;
+//     fetch(`url${value}`)
+//     .then(response => response.json())
+//     .then(data=>{
+// 		let shows = data.Books;
+//         p.innerHTML="";
+//         shows.results.forEach(element => {
+//             createElements(element)
+//         });
+//     })}
+
+// // search by enter key
+//     input.addEventListener("keyup", function(event) {
+//         console.log(event.key)
+//         if(event.keyCode >= 48 && event.keyCode <= 90) {
+//             searchBtn.innerHTML = event.key
+//         }        
+//         if (event.keyCode === 13) {
+//          event.preventDefault();
+//          fetchName()
+//         }
+//       });
 
 	
