@@ -1,19 +1,17 @@
-let url = 'https://mmulahvictor.github.io/data/db.json'
-let p = ""
-const input = document.querySelector('search')
+let p = "";
+const input = document.querySelector('search');
 const searchBtn = document.querySelector('#search-btn');
 
 function fetchBooks(){
+	const url = 'https://mmulahvictor.github.io/data/db.json'
 fetch(url)
 	.then(response => response.json())
 	.then(data => {
-	
-	data.forEach(book =>{
-		
-		let divc = document.createElement('div')
-		divc.className = "created"
-		divc.innerHTML = p
-		document.querySelector('#row').appendChild(divc)
+	// console.log(data)
+	let array = data.Books
+	// console.log(array)
+	array.forEach(book =>{
+	// console.log(book.title)
 
 			p += `
 				<div class="col-md-4 rem">
@@ -27,15 +25,32 @@ fetch(url)
                 	</div>
             	</div>
 			`
-		function lookForBook(){
-			let search = document.querySelector('search').value
-			const books = book.find(x => x.title == search);
-			alert(books?.title || "not found!")
-			return false
-		}
-			
-			
-	})
 	document.querySelector('#row').innerHTML = p
+	})
 })}
-	fetchBooks()
+fetchBooks()
+	//search for a book
+const fetchName=()=>{
+    let value = input.value;
+    fetch(`url${value}`)
+    .then(response => response.json())
+    .then(shows=>{
+        p.innerHTML="";
+        shows.results.forEach(element => {
+            createElements(element)
+        });
+    })}
+
+// search by enter key
+    input.addEventListener("keyup", function(event) {
+        console.log(event.key)
+        if(event.keyCode >= 48 && event.keyCode <= 90) {
+            searchBtn.innerHTML = event.key
+        }        
+        if (event.keyCode === 13) {
+         event.preventDefault();
+         fetchName()
+        }
+      });
+
+	
