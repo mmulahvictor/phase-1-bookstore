@@ -1,17 +1,14 @@
+const url = 'https://mmulahvictor.github.io/data/db.json'
 let p = "";
 const input = document.querySelector('search');
 const searchBtn = document.querySelector('#search-btn');
 
 function fetchBooks(){
-	const url = 'https://mmulahvictor.github.io/data/db.json'
 fetch(url)
 	.then(response => response.json())
 	.then(data => {
-	// console.log(data)
 	let array = data.Books
-	// console.log(array)
 	array.forEach(book =>{
-	// console.log(book.title)
 
 			p += `
 				<div class="col-md-4 rem">
@@ -34,7 +31,8 @@ const fetchName=()=>{
     let value = input.value;
     fetch(`url${value}`)
     .then(response => response.json())
-    .then(shows=>{
+    .then(data=>{
+		let shows = data.Books;
         p.innerHTML="";
         shows.results.forEach(element => {
             createElements(element)
