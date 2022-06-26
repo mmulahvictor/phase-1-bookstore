@@ -62,29 +62,29 @@ function initialize(){
 initialize()
 
 	//search for a book
-let input = document.querySelector('search');
-const searchBtn = document.querySelector('#search-btn');
+// let input = document.querySelector('search');
+// const searchBtn = document.querySelector('#search-btn');
 
-const fetchName=()=>{
-    let value = input.value;
-    fetch(`url${value}`)
-    .then(response => response.json())
-    .then(data=>{
-		let shows = data.Books;
-        p.innerHTML="";
-        shows.results.forEach(element => {
-            createElements(element)
-        });
-    })}
+// const fetchName=()=>{
+//     let value = input.value;
+//     fetch(`url${value}`)
+//     .then(response => response.json())
+//     .then(data=>{
+// 		let shows = data.Books;
+//         p.innerHTML="";
+//         shows.results.forEach(element => {
+//             createElements(element)
+//         });
+//     })}
 
-// search by enter key
-    input.addEventListener("keyup", (event) => {
-        console.log(event.key)
-        if(event.keyCode >= 48 && event.keyCode <= 90) {
-            searchBtn.innerHTML = event.key
-        }
-        if (event.keyCode === 13) {
-         event.preventDefault();
-         fetchName()
-        }
-      });
+// // search by enter key
+//     input.addEventListener("keyup", (event) => {
+//         console.log(event.key)
+//         if(event.keyCode >= 48 && event.keyCode <= 90) {
+//             searchBtn.innerHTML = event.key
+//         }
+//         if (event.keyCode === 13) {
+//          event.preventDefault();
+//          fetchName()
+//         }
+//       });
