@@ -10,42 +10,45 @@
 </head>
 <body>
     <h1 class="title">Book store</h1>
-
+  <div class="flex-items">
     <!-- search area -->
-    <section class="search-area">
-        <h1>Books search</h1>
-        <div class="search-container flex">
-          <form class="flex" id="submit">
-            <input type="text" id="search" placeholder="Search books ..."/>
-            <button class="search-btn" type="submit">search</button>
-          </form>
-        </div>
-      </section>
-      <div class="continer">
-        <form action="" id="book-form">
-          <label for="name">Book title</label>
-            <input type="text" id="title" name="title">
-          <label for="name">Book Author</label>
-            <input type="text" id="author" name="author">
-          <label for="name">Image Url</label>
-            <input type="text" id="img-url" name="imgUrl">
-          <label for="name">Price</label>
-            <input type="text" id="price" name="Price">
-          <label for="name">Review</label>
-            <input type="text" id="review" name="3.2 out of 5">
-          <label for="description">Description</label>
-          <textarea name="description" id="description"></textarea>
-          <label for="name">Source</label>
-            <input type="text" id="source" name="source">
-          <button type="submit">Add book</button>
+    <div class="search-area">
+      <h1>Books search</h1>
+      <div class="search-container flex">
+        <form class="flex" id="submit">
+          <input type="text" id="search" placeholder="Search books ..."/>
+          <button class="search-btn" type="submit">search</button>
         </form>
       </div>
-    
-        <div class="row" id="row">
-            
-        </div>
+    </div>
+  
+      <div class="row" id="row">
+          
+      </div>
 
+      <div class="forms">
+        <h2>Insert new book</h2>
+        <div class="continer">
+          <form action="" id="book-form">
+            <label for="name">Book title</label><br>
+              <input type="text" id="title" name="title" placeholder=" e.g My book title"><br>
+            <label for="name">Book Author</label><br>
+              <input type="text" id="author" name="author" placeholder="e.g Victor Mmulah"><br>
+            <label for="name">Image Url</label><br>
+              <input type="text" id="img-url" name="imgUrl" placeholder="book image url"><br>
+            <label for="name">Price</label><br>
+              <input type="text" id="price" name="Price" placeholder="£16.00"><br>
+            <label for="name">Review</label><br>
+              <input type="text" id="review" name="review" placeholder="3.2 out of 5 stars""><br>
+            <label for="description">Description</label><br>
+            <textarea name="description" id="description" placeholder="Some information about the book"></textarea><br>
+            <label for="name">Source</label><br>
+              <input type="text" id="source" name="source" placeholder="www.amazon.co.uk"><br>
+            <button type="submit">Add book</button><br>
+          </form>
+        </div>
+      </div>
+  </div>
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/post.js"></script>
 </body>
 </html>

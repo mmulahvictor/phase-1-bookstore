@@ -1,5 +1,14 @@
-.class{
+body{
+    background: dimgray;
+}
+
+.title{
     text-align: center;
+    color: white;
+    background: rgb(243,68,35);
+}
+h1:hover{
+    color: #5FE5C1;
 }
 .search-wrapper{
     display: flex;
@@ -27,4 +36,11 @@ input{
 }
 .rem{
     height: 450px;
+}
+.flex-items{
+    display: flex;
+}
+.forms{
+    position: sticky;
+    justify-content: right;
 }
