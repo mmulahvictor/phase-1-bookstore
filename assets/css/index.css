@@ -10,14 +10,34 @@ body{
 h1:hover{
     color: #5FE5C1;
 }
+.flex-items{
+    display: flex;
+}
+.forms{
+    justify-content: right;
+    /* background: rgb(243,68,35); */
+    color: rgb(243,68,35);
+    background: white;
+    padding-left: 10px;
+}
+.search-area{
+    /* background: rgb(243,68,35); */
+    color: rgb(243,68,35);
+    background: white;
+    padding-left: 10px;
+}
+form > input{
+    border-radius: 5px;
+    background: rgb(243,68,35);
+    font-size: 1rem;
+    color: white;
+}
 .search-wrapper{
     display: flex;
     flex-direction: column;
     gap: .25rem;
 }
-input{
-    font-size: 1rem;
-}
+
 /* .hidden{
     display: none !important;
 }
@@ -36,11 +56,4 @@ input{
 }
 .rem{
     height: 450px;
-}
-.flex-items{
-    display: flex;
-}
-.forms{
-    position: sticky;
-    justify-content: right;
 }
