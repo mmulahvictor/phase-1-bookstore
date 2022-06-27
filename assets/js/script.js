@@ -1,8 +1,9 @@
 const url = 'https://mmulahvictor.github.io/data/db.json'
 let p = "";
-
+let input = document.querySelector('#submit');
 document.querySelector('#book-form').addEventListener('submit', handleSubmit)
 
+//create a new book list
 function handleSubmit(e){
 	e.preventDefault()
 	let bookObj = {
@@ -15,76 +16,64 @@ function handleSubmit(e){
 		source: e.target.source.value
 	}
 	fetchBooks(bookObj)
-	newBook(bookObj)
 }
 
+//fetch books from API
 function fetchBooks(){
 fetch(url)
 	.then(response => response.json())
 	.then(data => {
 	let array = data.Books
-	array.forEach(book =>{
+	array.forEach(data =>{
 
-			p += `
-				<div class="col-md-6 rem">
-                	<div class="card" style="width:400px">
-                	    <img class="card-img-top" src= ${book.imgUrl} style="width:100%">
-                	    <div class="card-body">
-                	        <h4 class="card-title text-danger">J${book.title}</h4>
-                	        <p class="card-text">${book.description}</p>
-                	        <a href="#" class="btn btn-danger" onclick="myFunction()">${book.price}</a>
-                	    </div>
-                	</div>
-            	</div>
-			`
-	document.querySelector('#row').innerHTML = p
+        // add event listeners for the search input
+input.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let target = document.querySelector('#search')
+	const value = target.value
+        let title1 = data.title;
+        let author1 = data.author;
+    
+	if( title1 === "56 Days"){
+        console.log("yes")
+    }else{
+        let div9 = document.querySelector('.rem')
+        console.log(div9)
+        div9.remove()
+        console.log("no");
+    }
+    input.reset()
+	})
+
+    //manipulate html content with js
+        let rem = document.createElement('div')
+            rem.className = "col-md-6 rem"
+        let card = document.createElement("div")
+            card.className = "card"
+            card.style.width = "400px"
+        rem.appendChild(card)
+        let img = document.createElement("img")
+            img.className = "card-img-top"
+            img.src = data.imgUrl
+            card.appendChild(img)
+        let divCard = document.createElement("div")
+            divCard.className = "card-body"
+            card.appendChild(divCard)
+        let h4 = document.createElement("h4")
+            h4.className = "card-title text-danger"
+            h4.textContent = data.title
+            divCard.appendChild(h4)
+        let p = document.createElement("p")
+            p.className = "card-text"
+            p.textContent = data.description
+            divCard.appendChild(p)
+        let a = document.createElement("a")
+            a.className= "btn btn-danger"
+            a.textContent = data.price
+            divCard.appendChild(a) 
+
+	let row = document.querySelector('#row')
+    row.appendChild(rem)
 	})
 })}
-
-function newBook(bookObj){
-
-	fetch(url,{
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body:JSON.stringify(bookObj)
-	})
-	.then(res => res.json())
-	.then(book => console.log(book))
-}
-
-
-function initialize(){
-	fetchBooks()
-	
-}
-initialize()
-
-	//search for a book
-// let input = document.querySelector('search');
-// const searchBtn = document.querySelector('#search-btn');
-
-// const fetchName=()=>{
-//     let value = input.value;
-//     fetch(`url${value}`)
-//     .then(response => response.json())
-//     .then(data=>{
-// 		let shows = data.Books;
-//         p.innerHTML="";
-//         shows.results.forEach(element => {
-//             createElements(element)
-//         });
-//     })}
-
-// // search by enter key
-//     input.addEventListener("keyup", (event) => {
-//         console.log(event.key)
-//         if(event.keyCode >= 48 && event.keyCode <= 90) {
-//             searchBtn.innerHTML = event.key
-//         }
-//         if (event.keyCode === 13) {
-//          event.preventDefault();
-//          fetchName()
-//         }
-//       });
+fetchBooks()

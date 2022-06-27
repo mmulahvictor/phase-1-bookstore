@@ -39,10 +39,10 @@ form > input{
     gap: .25rem;
 }
 
-/* .hidden{
-    display: none !important;
-}
-.visible{
+.hidden{
+    display: none ;
+} 
+/*.visible{
     display: flex;
 } */
 .card-body{
