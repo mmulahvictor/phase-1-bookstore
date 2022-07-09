@@ -1,60 +1,70 @@
-body{
+body {
     background: dimgray;
 }
 
-.title{
+.title {
     text-align: center;
     color: white;
-    background: rgb(243,68,35);
+    background: rgb(243, 68, 35);
 }
-h1:hover{
+
+h1:hover {
     color: #5FE5C1;
 }
-.flex-items{
+
+.flex-items {
     display: flex;
 }
-.forms{
+
+.forms {
     justify-content: right;
     /* background: rgb(243,68,35); */
-    color: rgb(243,68,35);
+    color: rgb(243, 68, 35);
     background: white;
     padding-left: 10px;
 }
-.search-area{
+
+.search-area {
     /* background: rgb(243,68,35); */
-    color: rgb(243,68,35);
+    color: rgb(243, 68, 35);
     background: white;
     padding-left: 10px;
     margin-right: 10px;
 }
-form > input{
+
+form>input {
     border-radius: 5px;
-    background: rgb(243,68,35);
+    background: rgb(243, 68, 35);
     font-size: 1rem;
     color: white;
 }
-.search-wrapper{
+
+.search-wrapper {
     display: flex;
     flex-direction: column;
     gap: .25rem;
 }
 
-.hidden{
-    display: none ;
-} 
+.hidden {
+    display: none;
+}
+
 /*.visible{
     display: flex;
 } */
-.card-body{
+.card-body {
     height: 300px;
     overflow: scroll;
 }
-.card{
+
+.card {
     height: 93%;
 }
-.card-img-top{
+
+.card-img-top {
     height: 60%;
 }
-.rem{
+
+.rem {
     height: 450px;
 }

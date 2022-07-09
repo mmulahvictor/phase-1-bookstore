@@ -4,10 +4,10 @@
 
 ## Table of Content
 
-- [](#)
-  - [By Victor Mmulah](#by-victor-mmulah)
-  - [Table of Content](#table-of-content)
-  - [Description](#description)
+<!-- - [](#) -->
+- [By Victor Mmulah](#by-victor-mmulah)
+- [Table of Content](#table-of-content)
+- [Description](#description)
   - [Features](#features)
     - [Requirements](#requirements)
     - [Installation Process](#installation-process)
@@ -44,15 +44,15 @@ As a user of the application,you will be able to :
 
 ### Live Link
 
-- Click this link to view the live application <https://mmulahvictor.github.io/phase-1-bookstore/ >
+- Click this link to view the live application <<https://mmulahvictor.github.io/phase-1-bookstore/> >
 
 ### Technology  Used
 
-- HTML - which was used to develope the structure off the pages.
+- HTML - which was used to develop the structure of the pages.
 
 - CSS - which was used to style the User Interface.
 - JavaScript - which was used for DOM(Document Object Manipulation) scripts.
-JSON - for data manipulation
+- JSON - for data manipulation
 
 ## Licence
 
